@@ -7,15 +7,16 @@ const userInputFroyo = prompt(
 // Parse into an array of strings/flavors.
 const froyoArray = userInputFroyo.split(",");
 console.log(froyoArray);
-let object = {};
+let flavors = {};
 // let keys = Object.keys(object);
 for (const item of froyoArray) {
-  if (object[item]) {
+  if (flavors[item]) {
     // if they have that item +1
-    object[item] += 1;
+    flavors[item] += 1;
   } // if they dont have item
   else {
-    object[item] = 1;
+    flavors[item] = 1;
   }
 }
-console.table(object);
+console.table(flavors);
+alert(JSON.stringify(flavors));
